@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="18633RaduUngureanu.RadioSurubelnita" Publisher="CN=E41AA760-384D-4428-A849-9CF8CE37A53E" Version="1.0.0.3" />
+  <Properties>
+    <DisplayName>Radio Surubelnita</DisplayName>
+    <PublisherDisplayName>Radu Ungureanu</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="WindowsStore.App">
+      <VisualElements DisplayName="Radio Surubelnita" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Windows Store App of Radio Surubelnita (http://www.radiosurubelnita.ro)" ForegroundText="light" BackgroundColor="#FF6D00">
+        <LockScreen Notification="badge" BadgeLogo="Assets/Badge.png" />
+        <DefaultTile ShowName="noLogos" ShortName="Surubelnita" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#E8E8E8" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" StartPage="MainPage.xaml">
+          <BackgroundTasks>
+            <Task Type="audio" />
+            <Task Type="controlChannel" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,97 @@
+﻿<UserControl
+    x:Class="WindowsStore.Views.PrivacyPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WindowsStore.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1000"
+    d:DesignWidth="400">
+
+    <Border BorderBrush="#DB6F27" BorderThickness="3,0,0,0">
+        <Grid Background="White" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Background="#DB6F27" Grid.Row="0">
+                <Grid>
+                    <Grid.Transitions>
+                        <TransitionCollection>
+                            <EntranceThemeTransition FromHorizontalOffset="50" />
+                        </TransitionCollection>
+                    </Grid.Transitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="40, 32, 17, 13">
+                        <Button 
+                            x:Name="BackButton" 
+                            Margin="0,3,0,0" 
+                            Style="{StaticResource BackButtonStyle}" 
+                            Click="BackButton_Click"/>
+                        <TextBlock 
+                            Margin="10,10,0,0" 
+                            FontFamily="Segoe UI" 
+                            FontWeight="SemiLight" 
+                            FontSize="24.6667" 
+                            Text="Privacy Policy"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <!-- CONTENT AREA -->
+            <StackPanel Margin="40,30,25,10" VerticalAlignment="Top" Grid.Row="1">
+                <StackPanel.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition FromHorizontalOffset="120" />
+                    </TransitionCollection>
+                </StackPanel.Transitions>
+
+                <TextBlock Text="RO:" Style="{StaticResource SubheaderTextStyle}"/>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>1. Date salvate:</Bold>
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    Aplicatia nu salveaza nicio informatie despre tine.
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>2. Protectia datelor:</Bold>
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    Aplicatia nu inregistreaza sau salveaza nicio informatie.
+                </TextBlock>
+                <Border Height="50"/>
+                <TextBlock Text="EN:" Style="{StaticResource SubheaderTextStyle}"/>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>1. Data collected:</Bold>
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    This application does not gather any information about you.
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    <Bold>2. Protecting data:</Bold>
+                </TextBlock>
+                <TextBlock
+                    TextWrapping="Wrap" 
+                    Style="{StaticResource SubtitleTextStyle}">
+                    This application does not collect or store any information.
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
